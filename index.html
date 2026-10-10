@@ -3,713 +3,1987 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101010">
-<meta name="description" content="Shop stylish bails, bumshorts, clothing and accessories at Mimas Bails & Bumshorts. Nails that slay, shorts that fit.">
-<title>Mimas Bails & Bumshorts | Official Store</title>
+<meta name="theme-color" content="#17120f">
+
+<title>MIMAS | Nails & Bumshorts — A Study in Style</title>
+
+<meta name="description" content="Discover Mimas Nails & Bumshorts. Elevated beauty, statement nails and confident fashion. Shop the collection and order directly through WhatsApp.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#101010;
-  --card:#1b1b1b;
-  --accent:#e8ff57;
-  --text:#ffffff;
-  --muted:#b7b7b7;
-  --border:#333333;
+  --ink:#17120f;
+  --ink-soft:#241c18;
+  --cream:#f6f0e8;
+  --paper:#fffaf4;
+  --gold:#c4a16b;
+  --gold-light:#dfc79f;
+  --rose:#d8a9a1;
+  --muted:#a99b90;
+  --line:rgba(196,161,107,.25);
+  --green:#25d366;
+  --serif:"Italiana",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
+
+*{
+  box-sizing:border-box;
   margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
+  padding:0;
 }
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-.topbar{
-  padding:12px;
-  background:var(--accent);
-  color:#111;
-  text-align:center;
-  font-size:12px;
-  font-weight:bold;
-  letter-spacing:1px;
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:100px;
 }
-.container{width:min(1150px,92%);margin:auto}
-header{
-  position:sticky;
-  top:0;
-  z-index:20;
-  background:rgba(16,16,16,.96);
-  border-bottom:1px solid var(--border);
+
+body{
+  background:var(--ink);
+  color:var(--cream);
+  font-family:var(--sans);
+  font-size:14px;
+  -webkit-font-smoothing:antialiased;
 }
-.nav{
-  min-height:75px;
+
+body,button,input,select,textarea{
+  font-family:var(--sans);
+}
+
+button,a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+.container{
+  width:min(1320px,91%);
+  margin:auto;
+}
+
+.announcement{
+  min-height:34px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:center;
+  padding:8px 15px;
+  background:var(--gold);
+  color:var(--ink);
+  text-align:center;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:2.3px;
+  text-transform:uppercase;
+}
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(23,18,15,.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+
+.navigation{
+  min-height:91px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
   gap:20px;
 }
-.logo{
-  font-weight:900;
-  font-size:20px;
-  letter-spacing:1px;
+
+.nav-left,.nav-right{
+  display:flex;
+  align-items:center;
+  gap:25px;
 }
-.logo span{color:var(--accent)}
-.navlinks{display:flex;gap:20px;flex-wrap:wrap}
-.navlinks a{font-size:13px;color:#ddd}
-.navlinks a:hover{color:var(--accent)}
+
+.nav-right{
+  justify-content:flex-end;
+}
+
+.nav-link{
+  font-size:10px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:1.4px;
+  color:#d0c5bb;
+  transition:color .25s;
+}
+
+.nav-link:hover{
+  color:var(--gold-light);
+}
+
+.brand{
+  text-align:center;
+  line-height:1;
+}
+
+.brand-name{
+  font-family:var(--serif);
+  font-size:36px;
+  letter-spacing:5px;
+  color:var(--paper);
+}
+
+.brand-sub{
+  margin-top:9px;
+  color:var(--gold);
+  font-size:8px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.nav-contact{
+  border:1px solid var(--gold);
+  padding:12px 15px;
+  color:var(--gold-light);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+  transition:.25s;
+}
+
+.nav-contact:hover{
+  background:var(--gold);
+  color:var(--ink);
+}
+
+/* HERO */
+
 .hero{
   display:grid;
   grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:35px;
-  padding:55px 0;
+  min-height:680px;
+  align-items:stretch;
+  border-bottom:1px solid var(--line);
 }
+
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:75px 9% 75px max(4.5vw,25px);
+}
+
 .eyebrow{
-  color:var(--accent);
-  font-size:12px;
-  letter-spacing:2px;
-  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--gold);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:3px;
   text-transform:uppercase;
 }
+
+.eyebrow:before{
+  content:"";
+  width:28px;
+  height:1px;
+  background:var(--gold);
+}
+
 .hero h1{
-  font-size:clamp(40px,6vw,70px);
-  line-height:1.02;
-  margin:15px 0;
+  margin:30px 0 22px;
+  font-family:var(--serif);
+  font-size:clamp(58px,7.2vw,105px);
+  font-weight:400;
+  letter-spacing:-2px;
+  line-height:.96;
 }
-.hero h1 span{color:var(--accent)}
-.hero p{
-  color:var(--muted);
-  line-height:1.8;
-  font-size:15px;
-  max-width:500px;
+
+.hero h1 em{
+  color:var(--gold-light);
+  font-weight:400;
 }
-.hero img{
+
+.hero-description{
+  max-width:390px;
+  color:#bcb0a6;
+  font-size:13px;
+  line-height:2;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:33px;
+}
+
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:48px;
+  padding:14px 22px;
+  border:1px solid var(--gold);
+  background:var(--gold);
+  color:var(--ink);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  transition:background .25s,color .25s,border-color .25s;
+}
+
+.button:hover{
+  background:var(--gold-light);
+  border-color:var(--gold-light);
+}
+
+.button-outline{
+  background:transparent;
+  color:var(--cream);
+  border-color:rgba(246,240,232,.3);
+}
+
+.button-outline:hover{
+  background:var(--cream);
+  color:var(--ink);
+  border-color:var(--cream);
+}
+
+.hero-footnote{
+  margin-top:50px;
+  color:#8f8177;
+  font-size:9px;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+}
+
+.hero-visual{
+  position:relative;
+  min-height:580px;
+  overflow:hidden;
+  background:#30241e;
+}
+
+.hero-visual img{
+  position:absolute;
+  inset:0;
   width:100%;
-  height:420px;
+  height:100%;
   object-fit:cover;
-  border-radius:20px;
-  border:1px solid var(--border);
+  object-position:center;
+  transition:transform 1.2s cubic-bezier(.2,.7,.2,1);
 }
-.btn{
-  display:inline-block;
-  background:var(--accent);
-  color:#111;
-  border:0;
-  padding:14px 18px;
-  border-radius:9px;
-  font-weight:bold;
-  font-size:12px;
+
+.hero-visual:hover img{
+  transform:scale(1.035);
+}
+
+.hero-visual:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    0deg,
+    rgba(20,13,10,.68),
+    transparent 55%,
+    rgba(20,13,10,.08)
+  );
+}
+
+.hero-caption{
+  position:absolute;
+  z-index:2;
+  bottom:45px;
+  left:38px;
+  right:30px;
+}
+
+.hero-caption small{
+  color:var(--gold-light);
+  text-transform:uppercase;
+  font-size:9px;
+  letter-spacing:3px;
+}
+
+.hero-caption h2{
+  margin-top:12px;
+  font-family:var(--serif);
+  font-size:45px;
+  font-weight:400;
+}
+
+/* BRAND VALUES */
+
+.brand-values{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-bottom:1px solid var(--line);
+}
+
+.value{
+  padding:27px 15px;
   text-align:center;
+  border-right:1px solid var(--line);
 }
-.btn:hover{opacity:.86}
-.btn-dark{
-  background:#292929;
-  color:white;
-  border:1px solid #444;
+
+.value:last-child{
+  border-right:0;
 }
-.section{padding:35px 0}
-.section-title{
+
+.value strong{
+  display:block;
+  margin-bottom:7px;
+  color:var(--gold-light);
+  font-family:var(--serif);
+  font-size:20px;
+  font-weight:400;
+}
+
+.value span{
+  color:#a99d93;
+  font-size:9px;
+  letter-spacing:1px;
+}
+
+/* COLLECTION */
+
+.section{
+  padding:100px 0;
+}
+
+.section-heading{
   display:flex;
   justify-content:space-between;
   align-items:end;
-  gap:15px;
-  margin-bottom:22px;
+  gap:25px;
+  margin-bottom:35px;
 }
-.section-title h2{
-  font-size:30px;
-  margin:0 0 8px;
+
+.section-kicker{
+  color:var(--gold);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
 }
-.muted{color:var(--muted);font-size:13px;line-height:1.6}
-.toolbar{
+
+.section-heading h2{
+  margin-top:12px;
+  font-family:var(--serif);
+  font-size:clamp(39px,5vw,63px);
+  font-weight:400;
+  line-height:1;
+}
+
+.section-heading p{
+  max-width:330px;
+  color:#a99d93;
+  font-size:12px;
+  line-height:1.9;
+}
+
+.collection-tabs{
   display:flex;
-  gap:10px;
-  margin-bottom:22px;
   flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:28px;
 }
-.field{
-  background:#202020;
-  border:1px solid #3b3b3b;
-  color:white;
-  padding:13px;
-  border-radius:9px;
+
+.filter-button{
+  padding:12px 17px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:#c2b6ab;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.filter-button.active,
+.filter-button:hover{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:var(--ink);
+}
+
+.search-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+  margin-bottom:28px;
+}
+
+.input{
   width:100%;
   min-width:0;
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:0;
+  outline:none;
+  background:#201915;
+  color:var(--cream);
+  font-size:12px;
 }
-.toolbar input{flex:1;min-width:180px}
-.toolbar select{width:auto;min-width:160px}
+
+.input:focus{
+  border-color:var(--gold);
+}
+
 .product-grid{
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:17px;
+  gap:22px 16px;
 }
-.product{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:15px;
+
+.product-card{
+  min-width:0;
+  animation:appear .45s ease both;
+}
+
+.product-image{
+  position:relative;
   overflow:hidden;
-  transition:transform .2s,border-color .2s;
+  background:#2a211d;
+  aspect-ratio:4/5;
 }
-.product:hover{
-  transform:translateY(-4px);
-  border-color:var(--accent);
-}
-.product img{
+
+.product-image img{
   width:100%;
-  height:230px;
+  height:100%;
   object-fit:cover;
-  background:#292929;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1);
 }
-.product-info{padding:14px}
-.category-label{
-  color:var(--accent);
-  font-size:10px;
-  font-weight:bold;
-  text-transform:uppercase;
+
+.product-card:hover .product-image img{
+  transform:scale(1.045);
+}
+
+.product-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  padding:8px 10px;
+  background:var(--cream);
+  color:var(--ink);
+  font-size:8px;
+  font-weight:700;
   letter-spacing:1px;
+  text-transform:uppercase;
 }
-.product h3{font-size:16px;margin:9px 0}
+
+.product-info{
+  padding:17px 2px 0;
+}
+
+.product-category{
+  color:var(--gold);
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.product-name{
+  margin-top:9px;
+  font-family:var(--serif);
+  font-size:21px;
+  font-weight:400;
+  line-height:1.25;
+}
+
 .product-description{
-  font-size:12px;
-  line-height:1.6;
-  color:var(--muted);
-  min-height:38px;
+  margin-top:8px;
+  color:#a99d93;
+  font-size:11px;
+  line-height:1.8;
+  overflow-wrap:anywhere;
 }
-.price{
-  font-size:20px;
-  font-weight:900;
-  margin:12px 0;
+
+.product-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  margin-top:17px;
+  padding-top:13px;
+  border-top:1px solid var(--line);
 }
-.product .btn{width:100%}
-.empty{
-  padding:25px;
-  color:var(--muted);
+
+.product-price{
+  color:var(--cream);
+  font-size:14px;
+  font-weight:700;
+}
+
+.product-order{
+  border:0;
+  background:transparent;
+  color:var(--gold-light);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.product-order:hover{
+  color:white;
+}
+
+.empty-state{
+  padding:50px 15px;
+  color:#a99d93;
   text-align:center;
-}
-.promo{
-  margin:35px 0;
-  padding:30px;
-  border:1px solid #444;
-  border-radius:17px;
-  background:linear-gradient(130deg,#242424,#121212);
-}
-.promo h2{font-size:28px;margin-top:0}
-.promo h2 span{color:var(--accent)}
-.promo p{color:var(--muted);line-height:1.7}
-.notice{
-  padding:15px;
-  background:#25251a;
-  border:1px solid #565638;
-  color:#f0f0c9;
-  border-radius:10px;
   font-size:12px;
-  line-height:1.7;
 }
-.admin{
-  background:#191919;
-  border:1px solid #383838;
-  border-radius:16px;
-  padding:22px;
-  margin:30px 0 45px;
-}
-.admin h2{margin-top:0}
-.form-grid{
+
+/* EDITORIAL BRAND SECTION */
+
+.editorial{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:15px;
+  background:var(--cream);
+  color:var(--ink);
 }
-.form-group label{
-  display:block;
+
+.editorial-image{
+  position:relative;
+  min-height:510px;
+  background:#d3bcb0;
+  overflow:hidden;
+}
+
+.editorial-image img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  inset:0;
+  object-fit:cover;
+}
+
+.editorial-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:65px 10%;
+}
+
+.editorial-copy .section-kicker{
+  color:#80613a;
+}
+
+.editorial-copy h2{
+  margin:23px 0;
+  font-family:var(--serif);
+  font-size:clamp(40px,5vw,68px);
+  font-weight:400;
+  line-height:1.03;
+}
+
+.editorial-copy h2 em{
+  color:#a87b73;
+}
+
+.editorial-copy p{
+  max-width:400px;
+  color:#655950;
   font-size:12px;
-  color:var(--muted);
-  margin-bottom:7px;
+  line-height:2;
 }
-.form-group.full{grid-column:1/-1}
-.form-group textarea{resize:vertical}
-.admin-actions{
+
+.editorial-copy .button{
+  margin-top:27px;
+  background:var(--ink);
+  color:var(--cream);
+  border-color:var(--ink);
+}
+
+.editorial-copy .button:hover{
+  background:#3a2c25;
+}
+
+/* HOW TO ORDER */
+
+.order-section{
+  padding:90px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.order-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:35px;
+  margin-top:45px;
+}
+
+.order-step{
+  padding-top:20px;
+  border-top:1px solid var(--gold);
+}
+
+.order-number{
+  color:var(--gold);
+  font-family:var(--serif);
+  font-size:35px;
+}
+
+.order-step h3{
+  margin:12px 0;
+  font-family:var(--serif);
+  font-size:24px;
+  font-weight:400;
+}
+
+.order-step p{
+  color:#a99d93;
+  font-size:11px;
+  line-height:1.9;
+}
+
+/* CONTACT */
+
+.contact-banner{
+  margin:80px auto;
+  padding:65px 25px;
+  background:#241a17;
+  border:1px solid var(--line);
+  text-align:center;
+}
+
+.contact-banner h2{
+  margin:15px 0;
+  font-family:var(--serif);
+  font-size:clamp(39px,5vw,65px);
+  font-weight:400;
+}
+
+.contact-banner h2 em{
+  color:var(--gold-light);
+}
+
+.contact-banner p{
+  max-width:470px;
+  margin:0 auto 25px;
+  color:#b8a99e;
+  font-size:12px;
+  line-height:1.9;
+}
+
+/* OWNER AREA */
+
+.owner-section{
+  padding:75px 0;
+  background:#120e0c;
+  border-top:1px solid var(--line);
+}
+
+.owner-panel{
+  max-width:700px;
+  margin:auto;
+  padding:30px;
+  border:1px solid var(--line);
+  background:#1b1512;
+}
+
+.owner-panel h2{
+  margin:12px 0;
+  font-family:var(--serif);
+  font-size:36px;
+  font-weight:400;
+}
+
+.owner-panel p{
+  color:#ad9f94;
+  font-size:11px;
+  line-height:1.9;
+}
+
+.owner-form{
+  display:grid;
+  gap:15px;
+  margin-top:25px;
+}
+
+.owner-form label{
+  display:block;
+  margin-bottom:7px;
+  color:#cbbdb0;
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.owner-form input,
+.owner-form select,
+.owner-form textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:0;
+  outline:none;
+  background:#100c0a;
+  color:var(--cream);
+  font-size:12px;
+}
+
+.owner-form input:focus,
+.owner-form select:focus,
+.owner-form textarea:focus{
+  border-color:var(--gold);
+}
+
+.owner-dashboard{
+  margin-top:25px;
+  padding-top:25px;
+  border-top:1px solid var(--line);
+}
+
+.owner-dashboard h3{
+  margin-bottom:15px;
+  font-family:var(--serif);
+  font-size:25px;
+  font-weight:400;
+}
+
+.owner-actions{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
   margin-top:15px;
 }
-.admin-list{
-  display:grid;
-  gap:9px;
-  margin-top:15px;
+
+.owner-product{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:10px;
+  padding:12px;
+  background:#241b17;
+  font-size:11px;
 }
-.admin-row{
+
+.owner-product strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+.remove-button{
+  padding:9px 11px;
+  border:1px solid #9a635c;
+  background:transparent;
+  color:#edb5a9;
+  font-size:9px;
+}
+
+.status{
+  margin-top:14px;
+  color:var(--gold-light);
+  font-size:11px;
+  line-height:1.8;
+  overflow-wrap:anywhere;
+}
+
+.security-note{
+  margin-top:25px;
+  padding:15px;
+  border:1px solid #65513b;
+  color:#d5c1a6;
+  font-size:10px;
+  line-height:1.9;
+}
+
+.hidden{
+  display:none!important;
+}
+
+/* FOOTER */
+
+.footer{
+  padding:55px 0 25px;
+  background:#0f0b09;
+}
+
+.footer-main{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:40px;
+}
+
+.footer-brand{
+  font-family:var(--serif);
+  font-size:33px;
+  letter-spacing:3px;
+}
+
+.footer-slogan{
+  margin-top:10px;
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:1.5px;
+}
+
+.footer h3{
+  margin-bottom:15px;
+  color:var(--gold-light);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.footer p,.footer a{
+  display:block;
+  margin-top:8px;
+  color:#a99b90;
+  font-size:11px;
+  line-height:1.9;
+}
+
+.footer a:hover{
+  color:var(--gold-light);
+}
+
+.footer-bottom{
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  padding:12px;
-  background:#242424;
-  border-radius:9px;
-  font-size:13px;
+  gap:20px;
+  flex-wrap:wrap;
+  padding-top:22px;
+  border-top:1px solid var(--line);
+  color:#7f7168;
+  font-size:9px;
 }
-.delete-btn{
-  background:#632929;
-  color:white;
-  border:0;
-  padding:9px 12px;
-  border-radius:7px;
-}
-footer{
-  padding:30px 0;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.8;
-}
-.footer-brand{color:white;font-weight:bold}
+
+/* WHATSAPP */
+
 .whatsapp-float{
   position:fixed;
-  bottom:18px;
-  right:16px;
-  z-index:50;
-  background:#25D366;
+  right:20px;
+  bottom:20px;
+  z-index:150;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:14px 18px;
+  border:1px solid rgba(255,255,255,.18);
+  background:var(--green);
   color:white;
-  padding:14px 17px;
-  border-radius:50px;
-  font-weight:bold;
-  font-size:13px;
-  box-shadow:0 5px 20px #0008;
+  box-shadow:0 8px 35px #0006;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.6px;
 }
-.hidden{display:none!important}
-@media(max-width:850px){
-  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero{grid-template-columns:1fr;padding:35px 0}
-  .hero img{height:320px}
-  .nav{padding:14px 0;align-items:flex-start;flex-direction:column}
-  .navlinks{gap:14px}
+
+/* ANIMATIONS */
+
+@keyframes appear{
+  from{
+    opacity:0;
+    transform:translateY(12px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
-@media(max-width:480px){
-  .product-grid{gap:10px}
-  .product img{height:155px}
-  .product-info{padding:10px}
-  .product h3{font-size:14px}
-  .product-description{font-size:11px}
-  .price{font-size:17px}
-  .section-title h2{font-size:25px}
-  .form-grid{grid-template-columns:1fr}
-  .form-group.full{grid-column:auto}
-  .hero img{height:260px}
-  .promo{padding:20px}
+
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{
+    scroll-behavior:auto!important;
+    animation:none!important;
+    transition:none!important;
+  }
+}
+
+@media(max-width:1000px){
+  .navigation{
+    grid-template-columns:1fr auto;
+  }
+
+  .brand{
+    grid-column:1;
+    grid-row:1;
+    text-align:left;
+  }
+
+  .nav-right{
+    grid-column:2;
+    grid-row:1;
+  }
+
+  .nav-left{
+    grid-column:1/-1;
+    grid-row:2;
+    padding-bottom:17px;
+  }
+
+  .hero{
+    min-height:570px;
+  }
+
+  .hero h1{
+    font-size:clamp(53px,7vw,80px);
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .editorial-copy{
+    padding:45px 8%;
+  }
+}
+
+@media(max-width:700px){
+  .announcement{
+    font-size:8px;
+    letter-spacing:1.2px;
+  }
+
+  .navigation{
+    min-height:75px;
+    gap:14px;
+  }
+
+  .brand-name{
+    font-size:30px;
+  }
+
+  .brand-sub{
+    font-size:7px;
+    letter-spacing:2.6px;
+  }
+
+  .nav-left{
+    gap:19px;
+    overflow-x:auto;
+    width:100%;
+    white-space:nowrap;
+  }
+
+  .nav-link{
+    font-size:9px;
+  }
+
+  .nav-contact{
+    padding:10px;
+    font-size:8px;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero-copy{
+    padding:65px 5%;
+  }
+
+  .hero h1{
+    font-size:clamp(61px,12vw,88px);
+  }
+
+  .hero-visual{
+    min-height:460px;
+  }
+
+  .hero-caption{
+    left:22px;
+    bottom:25px;
+  }
+
+  .hero-caption h2{
+    font-size:37px;
+  }
+
+  .brand-values{
+    grid-template-columns:1fr;
+  }
+
+  .value{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    padding:19px 10px;
+  }
+
+  .value:last-child{
+    border-bottom:0;
+  }
+
+  .section{
+    padding:70px 0;
+  }
+
+  .section-heading{
+    display:block;
+  }
+
+  .section-heading p{
+    margin-top:18px;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:27px 12px;
+  }
+
+  .product-image{
+    aspect-ratio:3/4;
+  }
+
+  .product-name{
+    font-size:19px;
+  }
+
+  .product-price{
+    font-size:12px;
+  }
+
+  .product-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .product-order{
+    padding:7px 0;
+  }
+
+  .editorial{
+    grid-template-columns:1fr;
+  }
+
+  .editorial-image{
+    min-height:390px;
+  }
+
+  .editorial-copy{
+    padding:55px 7%;
+  }
+
+  .order-grid{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .contact-banner{
+    margin:55px auto;
+    padding:45px 18px;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .owner-panel{
+    padding:20px;
+  }
+
+  .whatsapp-float{
+    right:12px;
+    bottom:12px;
+    padding:13px 15px;
+  }
+}
+
+@media(max-width:370px){
+  .hero h1{
+    font-size:55px;
+  }
+
+  .product-name{
+    font-size:17px;
+  }
+
+  .product-description{
+    font-size:10px;
+  }
+
+  .product-info{
+    padding-top:13px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  FRESH FASHION • NEW STOCK • NIGERIAN NAIRA • WHATSAPP ORDERS
+<div class="announcement">
+  A DISTINCTIVE EXPRESSION OF BEAUTY &nbsp;·&nbsp; NIGERIA
 </div>
 
-<header>
-  <div class="container nav">
-    <a href="#" class="logo">MIMAS <span>BAILS & BUMSHORTS</span></a>
-    <nav class="navlinks">
-      <a href="#home">Home</a>
-      <a href="#shop">Shop</a>
-      <a href="#about">About</a>
-      <a href="#stock">Manage Stock</a>
+<header class="header">
+  <div class="container navigation">
+
+    <nav class="nav-left">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#shop">Collections</a>
+      <a class="nav-link" href="#story">Our Story</a>
     </nav>
+
+    <a href="#home" class="brand">
+      <div class="brand-name">MIMAS</div>
+      <div class="brand-sub">Nails & Bumshorts</div>
+    </a>
+
+    <div class="nav-right">
+      <a
+        class="nav-contact"
+        href="https://wa.me/2347046202466"
+        target="_blank"
+        rel="noopener">
+        Contact the Boutique ↗
+      </a>
+    </div>
+
   </div>
 </header>
 
-<main class="container">
+<main>
+
+<!-- HERO -->
 
 <section class="hero" id="home">
-  <div>
-    <div class="eyebrow">Style starts here</div>
-    <h1>Nails that slay,<br><span>shorts that fit.</span></h1>
-    <p>
-      Welcome to Mimas Bails & Bumshorts — your fashion destination
-      for stylish bails, bumshorts, clothing and accessories.
-      Find your look, choose your favourites and order directly
-      through WhatsApp.
+
+  <div class="hero-copy">
+
+    <div class="eyebrow">The art of personal style</div>
+
+    <h1>
+      Nails that<br>
+      <em>slay.</em><br>
+      Shorts that<br>
+      <em>fit.</em>
+    </h1>
+
+    <p class="hero-description">
+      A considered edit of beauty and fashion.
+      Discover nail essentials, statement styles and
+      carefully selected pieces that celebrate confidence,
+      individuality and the pleasure of dressing well.
     </p>
-    <a href="#shop" class="btn">EXPLORE THE COLLECTION →</a>
+
+    <div class="hero-buttons">
+      <a class="button" href="#shop">
+        Discover the collection <span>↗</span>
+      </a>
+
+      <a class="button button-outline"
+         href="https://wa.me/2347046202466"
+         target="_blank"
+         rel="noopener">
+        Speak to Mimas
+      </a>
+    </div>
+
+    <div class="hero-footnote">
+      Beauty · Fashion · Individuality
+    </div>
+
   </div>
 
-  <img
-    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85"
-    alt="Fashion shopping inspiration"
-  >
-</section>
+  <div class="hero-visual">
+    <img
+      src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=85"
+      alt="Fashion editorial inspiration"
+      fetchpriority="high">
 
-<section id="shop" class="section">
-  <div class="section-title">
-    <div>
-      <div class="eyebrow">The collection</div>
-      <h2>Shop Your Style</h2>
-      <div class="muted">Browse products and order directly on WhatsApp.</div>
+    <div class="hero-caption">
+      <small>The Mimas edit</small>
+      <h2>Made to be noticed.</h2>
     </div>
   </div>
 
-  <div class="toolbar">
-    <input class="field" id="search" type="search" placeholder="Search products...">
-    <select class="field" id="category">
-      <option value="all">All categories</option>
-      <option value="Bails">Bails</option>
-      <option value="Bumshorts">Bumshorts</option>
-      <option value="Clothing">Clothing</option>
-      <option value="Accessories">Accessories</option>
-    </select>
+</section>
+
+<!-- BRAND VALUES -->
+
+<section class="brand-values">
+  <div class="value">
+    <strong>Beauty, considered.</strong>
+    <span>Discover your signature look.</span>
+  </div>
+
+  <div class="value">
+    <strong>Style, your way.</strong>
+    <span>Pieces for your individual expression.</span>
+  </div>
+
+  <div class="value">
+    <strong>Personal service.</strong>
+    <span>Order directly through WhatsApp.</span>
+  </div>
+</section>
+
+<!-- COLLECTION -->
+
+<section class="section container" id="shop">
+
+  <div class="section-heading">
+    <div>
+      <div class="section-kicker">A curated selection</div>
+      <h2>The Collection</h2>
+    </div>
+
+    <p>
+      Explore our beauty and fashion edit.
+      Find your favourites and contact us for availability
+      and personalised ordering.
+    </p>
+  </div>
+
+  <div class="collection-tabs" id="categoryTabs">
+    <button class="filter-button active" data-category="all">
+      All pieces
+    </button>
+
+    <button class="filter-button" data-category="Nails">
+      Nails
+    </button>
+
+    <button class="filter-button" data-category="Bumshorts">
+      Bumshorts
+    </button>
+
+    <button class="filter-button" data-category="Clothing">
+      Clothing
+    </button>
+
+    <button class="filter-button" data-category="Accessories">
+      Accessories
+    </button>
+  </div>
+
+  <div class="search-row">
+    <input
+      class="input"
+      id="search"
+      type="search"
+      placeholder="Search the collection..."
+      aria-label="Search products">
   </div>
 
   <div class="product-grid" id="products"></div>
-  <div class="empty hidden" id="empty">No products found. Try another search.</div>
+
+  <div class="empty-state hidden" id="empty">
+    Nothing here just yet. Try another category or search.
+  </div>
+
 </section>
 
-<section class="promo" id="about">
-  <div class="eyebrow">Your look. Your confidence.</div>
-  <h2>Nails that slay.<br><span>Shorts that fit.</span></h2>
-  <p>
-    We make it easy to discover fashion pieces that match your style.
-    Browse the available collection and contact us to confirm sizes,
-    colours, availability and delivery options.
-  </p>
-  <a class="btn" href="https://wa.me/2347046202466?text=Hello%20Mimas%20Bails%20%26%20Bumshorts%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">
-    CHAT WITH MIMAS
-  </a>
-</section>
+<!-- EDITORIAL STORY -->
 
-<div class="notice">
-  <strong>Price notice:</strong> The initial products and prices shown are
-  examples for the website demonstration, not confirmed store prices.
-  Please replace them with Mimas's actual products, photos and prices
-  before publishing. Prices are displayed in Nigerian naira (₦ NGN).
-</div>
+<section class="editorial" id="story">
 
-<section class="section" id="stock">
-  <div class="admin">
-    <div class="eyebrow">Store tools</div>
-    <h2>Stock Manager</h2>
-    <p class="muted">
-      Add new products and upload photos from your phone. You can also remove
-      items from this browser's product list. This demonstration does not have
-      an administrator login or shared online database.
+  <div class="editorial-image">
+    <img
+      src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1100&q=85"
+      alt="Beauty and personal style editorial"
+      loading="lazy">
+  </div>
+
+  <div class="editorial-copy">
+
+    <div class="section-kicker">A little about Mimas</div>
+
+    <h2>
+      Your style.<br>
+      Your rules.<br>
+      <em>Your moment.</em>
+    </h2>
+
+    <p>
+      Mimas Nails & Bumshorts is built around one simple idea:
+      personal style should feel like your own. From beauty
+      essentials to fashion favourites, we want every choice
+      to help you express yourself with confidence.
     </p>
 
-    <div class="form-grid">
-      <div class="form-group">
-        <label for="pname">Product name</label>
-        <input class="field" id="pname" placeholder="e.g. Premium Bumshorts">
-      </div>
+    <a class="button"
+       href="https://wa.me/2347046202466?text=Hello%20Mimas%2C%20I%20would%20like%20to%20know%20more%20about%20your%20collection."
+       target="_blank"
+       rel="noopener">
+      Discover Mimas ↗
+    </a>
 
-      <div class="form-group">
-        <label for="pcat">Category</label>
-        <select class="field" id="pcat">
-          <option>Bails</option>
-          <option>Bumshorts</option>
-          <option>Clothing</option>
-          <option>Accessories</option>
-        </select>
-      </div>
+  </div>
 
-      <div class="form-group">
-        <label for="pprice">Price in Nigerian naira (₦)</label>
-        <input class="field" id="pprice" type="number" min="1" placeholder="e.g. 6000">
-      </div>
+</section>
 
-      <div class="form-group">
-        <label for="pimage">Upload product photo</label>
-        <input class="field" id="pimage" type="file" accept="image/*">
-      </div>
+<!-- ORDER PROCESS -->
 
-      <div class="form-group full">
-        <label for="pdesc">Product description</label>
-        <textarea class="field" id="pdesc" rows="3" placeholder="Describe the item, sizes, colours and material..."></textarea>
-      </div>
+<section class="order-section container">
+
+  <div class="section-heading">
+    <div>
+      <div class="section-kicker">A personal shopping experience</div>
+      <h2>Make it yours.</h2>
     </div>
 
-    <div class="admin-actions">
-      <button class="btn" id="addProduct">ADD PRODUCT</button>
-      <button class="btn btn-dark" id="clearForm">CLEAR FORM</button>
+    <p>
+      Shopping with Mimas is simple.
+      Choose your piece and let us help with the details.
+    </p>
+  </div>
+
+  <div class="order-grid">
+
+    <div class="order-step">
+      <div class="order-number">01</div>
+      <h3>Explore</h3>
+      <p>
+        Browse the collection, compare styles and choose
+        the pieces that speak to you.
+      </p>
     </div>
 
-    <p class="muted" id="adminMessage" aria-live="polite"></p>
+    <div class="order-step">
+      <div class="order-number">02</div>
+      <h3>Connect</h3>
+      <p>
+        Send your chosen product to Mimas through WhatsApp
+        to confirm price, availability, size and colour.
+      </p>
+    </div>
 
-    <h3>Current Products</h3>
-    <div id="adminList" class="admin-list"></div>
+    <div class="order-step">
+      <div class="order-number">03</div>
+      <h3>Confirm</h3>
+      <p>
+        Discuss delivery and payment directly with the store
+        before completing your order.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="container">
+  <div class="contact-banner">
+
+    <div class="section-kicker" style="justify-content:center">
+      Your next favourite awaits
+    </div>
+
+    <h2>
+      Let’s find your <em>look.</em>
+    </h2>
+
+    <p>
+      Questions about a product? Want to know what's available?
+      Speak directly to Mimas and get help with your selection.
+    </p>
+
+    <a
+      class="button"
+      href="https://wa.me/2347046202466?text=Hello%20Mimas%20Nails%20%26%20Bumshorts%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+      target="_blank"
+      rel="noopener">
+      Chat on WhatsApp ↗
+    </a>
+
+  </div>
+</section>
+
+<!-- OWNER DASHBOARD -->
+
+<section class="owner-section" id="owner">
+  <div class="container">
+
+    <div class="owner-panel">
+
+      <div class="section-kicker">Restricted access</div>
+
+      <h2>Store Management</h2>
+
+      <p>
+        Product management is intended for the store owner.
+        Customers can browse and order without signing in.
+      </p>
+
+      <div id="loginPanel">
+
+        <form class="owner-form" id="loginForm">
+
+          <div>
+            <label for="ownerPassword">Owner password</label>
+
+            <input
+              id="ownerPassword"
+              type="password"
+              placeholder="Enter password"
+              autocomplete="current-password"
+              required>
+          </div>
+
+          <button class="button" type="submit">
+            Sign in to management
+          </button>
+
+        </form>
+
+        <div class="status" id="loginMessage" aria-live="polite"></div>
+
+      </div>
+
+      <div id="dashboard" class="owner-dashboard hidden">
+
+        <h3>Add a product</h3>
+
+        <form class="owner-form" id="productForm">
+
+          <div>
+            <label for="productName">Product name</label>
+            <input id="productName" required
+                   placeholder="Enter product name">
+          </div>
+
+          <div>
+            <label for="productCategory">Category</label>
+            <select id="productCategory">
+              <option value="Nails">Nails</option>
+              <option value="Bumshorts">Bumshorts</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Accessories">Accessories</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="productPrice">Price in Nigerian naira (₦)</label>
+            <input id="productPrice" type="number"
+                   min="1" required placeholder="e.g. 6500">
+          </div>
+
+          <div>
+            <label for="productImage">Product image</label>
+            <input id="productImage" type="file" accept="image/*">
+          </div>
+
+          <div>
+            <label for="productDescription">Product details</label>
+            <textarea id="productDescription" rows="3"
+                      placeholder="Describe the product, sizes and colours"></textarea>
+          </div>
+
+          <button class="button" type="submit">
+            Add to collection
+          </button>
+
+        </form>
+
+        <div class="status" id="ownerMessage" aria-live="polite"></div>
+
+        <h3 style="margin-top:30px">Current collection</h3>
+
+        <div id="adminProducts"></div>
+
+        <div class="owner-actions">
+          <button class="button button-outline" type="button" id="logout">
+            Sign out
+          </button>
+        </div>
+
+      </div>
+
+      <div class="security-note">
+        <strong>Important security limitation:</strong>
+        this HTML demonstration uses a browser-side password and
+        browser storage. It is not secure owner authentication.
+        A real online store needs a protected server-side login,
+        database permissions and shared image storage. Do not use
+        this demonstration to protect sensitive business information.
+      </div>
+
+    </div>
+
   </div>
 </section>
 
 </main>
 
-<footer>
+<!-- FOOTER -->
+
+<footer class="footer">
   <div class="container">
-    <div class="footer-brand">MIMAS BAILS & BUMSHORTS</div>
-    <strong>Nails that slay, shorts that fit.</strong><br>
-    WhatsApp: +234 704 620 2466<br>
-    Currency: Nigerian naira (₦ NGN)<br>
-    © <span id="year"></span> Mimas Bails & Bumshorts. All rights reserved.
+
+    <div class="footer-main">
+
+      <div>
+        <div class="footer-brand">MIMAS</div>
+        <div class="footer-slogan">
+          NAILS THAT SLAY, SHORTS THAT FIT.
+        </div>
+        <p>
+          Beauty and fashion for your individual expression.
+        </p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="#shop">The collection</a>
+        <a href="#story">Our story</a>
+        <a href="#owner">Store management</a>
+      </div>
+
+      <div>
+        <h3>Get in touch</h3>
+        <a href="https://wa.me/2347046202466"
+           target="_blank" rel="noopener">
+          WhatsApp: +234 704 620 2466
+        </a>
+        <p>Nigerian naira · ₦ NGN</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Mimas Nails & Bumshorts.</span>
+      <span>NAILS THAT SLAY. SHORTS THAT FIT.</span>
+    </div>
+
   </div>
 </footer>
 
-<a class="whatsapp-float"
-   href="https://wa.me/2347046202466?text=Hello%20Mimas%20Bails%20%26%20Bumshorts%2C%20I%20am%20interested%20in%20your%20products."
-   target="_blank" rel="noopener">WhatsApp Us</a>
+<a
+  class="whatsapp-float"
+  href="https://wa.me/2347046202466?text=Hello%20Mimas%20Nails%20%26%20Bumshorts%2C%20I%20am%20interested%20in%20your%20collection."
+  target="_blank"
+  rel="noopener">
+  WhatsApp ↗
+</a>
 
 <script>
 "use strict";
 
-/* Mimas's WhatsApp number: +234 704 620 2466 */
-const STORE_WHATSAPP = "2347046202466";
-const STORAGE_KEY = "mimas_bails_bumshorts_products_v1";
+/*
+ * DEMONSTRATION OWNER ACCESS ONLY.
+ *
+ * This password is visible in the source code.
+ * Replace it for local testing only.
+ *
+ * A live store needs secure backend authentication.
+ */
+
+const OWNER_PASSWORD = "CHANGE_THIS_PASSWORD";
+const WHATSAPP_NUMBER = "2347046202466";
+const STORAGE_KEY = "mimas_premium_products_v1";
 
 const starterProducts = [
   {
-    id:"sample-bails",
-    name:"Ladies' Bails Bundle",
-    category:"Bails",
-    price:85000,
-    description:"Sample listing. Confirm bundle contents and actual price.",
-    image:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"
+    id:"sample-nails",
+    name:"The Signature Nail Edit",
+    category:"Nails",
+    price:6500,
+    description:"Example listing. Confirm actual items and pricing.",
+    badge:"THE BEAUTY EDIT",
+    image:"https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85"
   },
   {
     id:"sample-shorts",
     name:"Everyday Bumshorts",
     category:"Bumshorts",
-    price:6000,
-    description:"Sample listing. Ask about available sizes and colours.",
-    image:"https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=80"
+    price:8500,
+    description:"Example listing. Confirm available sizes and colours.",
+    badge:"THE STYLE EDIT",
+    image:"https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=85"
   },
   {
-    id:"sample-outfit",
-    name:"Casual Ladies' Outfit",
+    id:"sample-clothing",
+    name:"The Statement Outfit",
     category:"Clothing",
-    price:10000,
-    description:"Sample listing. Confirm available styles and sizes.",
-    image:"https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=80"
+    price:18000,
+    description:"Example listing. Confirm actual style and price.",
+    badge:"THE FASHION EDIT",
+    image:"https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=85"
   },
   {
     id:"sample-accessories",
-    name:"Fashion Accessories",
+    name:"Finishing Touches",
     category:"Accessories",
-    price:5000,
-    description:"Sample listing. Confirm the item and actual price.",
-    image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80"
+    price:7500,
+    description:"Example listing. Confirm actual item and price.",
+    badge:"THE DETAILS",
+    image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=85"
   }
 ];
 
-function loadProducts(){
-  try{
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : starterProducts.map(p => ({...p}));
-  }catch(error){
-    return starterProducts.map(p => ({...p}));
-  }
-}
-
-let products = loadProducts();
-
-function money(amount){
-  return "₦" + Number(amount).toLocaleString("en-NG");
-}
+let activeCategory = "all";
 
 function escapeHTML(value){
-  return String(value ?? "").replace(/[&<>"']/g, function(character){
+  return String(value ?? "").replace(/[&<>"']/g, function(ch){
     return {
       "&":"&amp;",
       "<":"&lt;",
       ">":"&gt;",
       '"':"&quot;",
       "'":"&#39;"
-    }[character];
+    }[ch];
   });
 }
 
-function saveProducts(){
+function loadProducts(){
+  try{
+    const saved = localStorage.getItem(STORAGE_KEY);
+
+    if(saved){
+      const parsed = JSON.parse(saved);
+
+      if(Array.isArray(parsed)){
+        return parsed;
+      }
+    }
+  }catch(error){}
+
+  return starterProducts.map(function(product){
+    return {...product};
+  });
+}
+
+let products = loadProducts();
+
+function priceNGN(value){
+  return "₦" + Number(value).toLocaleString("en-NG");
+}
+
+function persistProducts(){
   try{
     localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
     return true;
   }catch(error){
-    document.getElementById("adminMessage").textContent =
-      "Could not save products. Try a smaller photo or remove some products.";
+    const message = document.getElementById("ownerMessage");
+
+    if(message){
+      message.textContent =
+        "Unable to save. Try a smaller image or remove unused products.";
+    }
+
     return false;
   }
 }
 
 function renderProducts(){
-  const searchTerm = document.getElementById("search").value.toLowerCase().trim();
-  const category = document.getElementById("category").value;
+  const search = document
+    .getElementById("search")
+    .value
+    .toLowerCase()
+    .trim();
 
   const filtered = products.filter(function(product){
-    const matchesCategory = category === "all" || product.category === category;
-    const searchable = (
-      product.name + " " + product.category + " " + product.description
+    const categoryMatch =
+      activeCategory === "all" ||
+      product.category === activeCategory;
+
+    const searchText = (
+      product.name + " " +
+      product.category + " " +
+      product.description
     ).toLowerCase();
-    return matchesCategory && searchable.includes(searchTerm);
+
+    return categoryMatch && searchText.includes(search);
   });
 
-  document.getElementById("products").innerHTML = filtered.map(function(product){
+  const grid = document.getElementById("products");
+
+  grid.innerHTML = filtered.map(function(product){
     return `
-      <article class="product">
-        <img src="${escapeHTML(product.image)}"
-             alt="${escapeHTML(product.name)}"
-             loading="lazy">
-        <div class="product-info">
-          <div class="category-label">${escapeHTML(product.category)}</div>
-          <h3>${escapeHTML(product.name)}</h3>
-          <div class="product-description">${escapeHTML(product.description)}</div>
-          <div class="price">${money(product.price)}</div>
-          <button class="btn" type="button" data-order="${escapeHTML(product.id)}">
-            ORDER ON WHATSAPP
-          </button>
+      <article class="product-card">
+
+        <div class="product-image">
+          <img
+            src="${escapeHTML(product.image)}"
+            alt="${escapeHTML(product.name)}"
+            loading="lazy">
+
+          <span class="product-badge">
+            ${escapeHTML(product.badge || "THE MIMAS EDIT")}
+          </span>
         </div>
+
+        <div class="product-info">
+
+          <div class="product-category">
+            ${escapeHTML(product.category)}
+          </div>
+
+          <h3 class="product-name">
+            ${escapeHTML(product.name)}
+          </h3>
+
+          <p class="product-description">
+            ${escapeHTML(product.description)}
+          </p>
+
+          <div class="product-bottom">
+            <span class="product-price">
+              ${priceNGN(product.price)}
+            </span>
+
+            <button
+              class="product-order"
+              type="button"
+              data-order="${escapeHTML(product.id)}">
+              Enquire ↗
+            </button>
+          </div>
+
+        </div>
+
       </article>
     `;
   }).join("");
 
-  document.getElementById("empty").classList.toggle("hidden", filtered.length !== 0);
+  document.getElementById("empty")
+    .classList.toggle("hidden", filtered.length > 0);
 
-  document.querySelectorAll("[data-order]").forEach(function(button){
+  grid.querySelectorAll("[data-order]").forEach(function(button){
     button.addEventListener("click", function(){
       orderProduct(button.dataset.order);
     });
   });
-
-  renderAdminList();
 }
 
 function orderProduct(id){
   const product = products.find(function(item){
     return item.id === id;
   });
+
   if(!product) return;
 
   const message =
-    "Hello Mimas Bails & Bumshorts! I would like to order:\n" +
+    "Hello Mimas Nails & Bumshorts.\n\n" +
+    "I am interested in:\n" +
     "Product: " + product.name + "\n" +
-    "Displayed price: " + money(product.price) + "\n" +
+    "Category: " + product.category + "\n" +
+    "Displayed price: " + priceNGN(product.price) + "\n\n" +
     "Please confirm availability, sizes, colours and delivery.";
 
-  const url = "https://wa.me/" + STORE_WHATSAPP +
-              "?text=" + encodeURIComponent(message);
+  const url =
+    "https://wa.me/" + WHATSAPP_NUMBER +
+    "?text=" + encodeURIComponent(message);
 
   window.open(url, "_blank", "noopener");
 }
 
-function renderAdminList(){
-  const list = document.getElementById("adminList");
+document.querySelectorAll("[data-category]").forEach(function(button){
+  button.addEventListener("click", function(){
+    activeCategory = button.dataset.category;
+
+    document.querySelectorAll("[data-category]").forEach(function(item){
+      item.classList.toggle("active", item === button);
+    });
+
+    renderProducts();
+  });
+});
+
+document.getElementById("search")
+  .addEventListener("input", renderProducts);
+
+/* DEMONSTRATION OWNER LOGIN */
+
+document.getElementById("loginForm")
+  .addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const password =
+      document.getElementById("ownerPassword").value;
+
+    if(password !== OWNER_PASSWORD){
+      document.getElementById("loginMessage").textContent =
+        "Access denied. Check the password and try again.";
+      return;
+    }
+
+    document.getElementById("loginPanel")
+      .classList.add("hidden");
+
+    document.getElementById("dashboard")
+      .classList.remove("hidden");
+
+    document.getElementById("loginMessage").textContent = "";
+
+    renderAdminProducts();
+  });
+
+function renderAdminProducts(){
+  const area = document.getElementById("adminProducts");
 
   if(products.length === 0){
-    list.innerHTML = '<p class="muted">No products listed.</p>';
+    area.innerHTML =
+      '<p class="status">No products in the collection.</p>';
     return;
   }
 
-  list.innerHTML = products.map(function(product){
+  area.innerHTML = products.map(function(product){
     return `
-      <div class="admin-row">
+      <div class="owner-product">
         <div>
-          <strong>${escapeHTML(product.name)}</strong><br>
-          <span class="muted">${escapeHTML(product.category)} · ${money(product.price)}</span>
+          <strong>${escapeHTML(product.name)}</strong>
+          <span>${escapeHTML(product.category)} ·
+            ${priceNGN(product.price)}</span>
         </div>
-        <button class="delete-btn" type="button" data-remove="${escapeHTML(product.id)}">
-          Remove
+
+        <button
+          class="remove-button"
+          type="button"
+          data-remove="${escapeHTML(product.id)}">
+          REMOVE
         </button>
       </div>
     `;
   }).join("");
 
-  document.querySelectorAll("[data-remove]").forEach(function(button){
+  area.querySelectorAll("[data-remove]").forEach(function(button){
     button.addEventListener("click", function(){
-      removeProduct(button.dataset.remove);
+      if(!confirm("Remove this product from this browser?")){
+        return;
+      }
+
+      const previousProducts = products;
+
+      products = products.filter(function(product){
+        return product.id !== button.dataset.remove;
+      });
+
+      if(persistProducts()){
+        renderProducts();
+        renderAdminProducts();
+
+        document.getElementById("ownerMessage").textContent =
+          "Product removed from this browser's collection.";
+      }else{
+        products = previousProducts;
+      }
     });
   });
 }
 
-function removeProduct(id){
-  if(!confirm("Remove this product from the list saved in this browser?")) return;
+document.getElementById("productForm")
+  .addEventListener("submit", function(event){
+    event.preventDefault();
 
-  products = products.filter(function(product){
-    return product.id !== id;
-  });
+    const name =
+      document.getElementById("productName").value.trim();
 
-  if(saveProducts()){
-    renderProducts();
-    document.getElementById("adminMessage").textContent =
-      "Product removed from this browser's list.";
-  }
-}
+    const category =
+      document.getElementById("productCategory").value;
 
-document.getElementById("addProduct").addEventListener("click", function(){
-  const name = document.getElementById("pname").value.trim();
-  const category = document.getElementById("pcat").value;
-  const price = Number(document.getElementById("pprice").value);
-  const description = document.getElementById("pdesc").value.trim();
-  const file = document.getElementById("pimage").files[0];
-  const message = document.getElementById("adminMessage");
+    const price =
+      Number(document.getElementById("productPrice").value);
 
-  if(!name || !Number.isFinite(price) || price <= 0){
-    message.textContent = "Enter a product name and a price greater than zero.";
-    return;
-  }
+    const description =
+      document.getElementById("productDescription").value.trim();
 
-  function addProduct(image){
-    const newProduct = {
-      id:"product-" + Date.now() + "-" + Math.random().toString(16).slice(2,7),
-      name:name,
-      category:category,
-      price:price,
-      description:description || "Contact the store for product details.",
-      image:image || "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"
-    };
+    const file =
+      document.getElementById("productImage").files[0];
 
-    products.unshift(newProduct);
+    const status =
+      document.getElementById("ownerMessage");
 
-    if(saveProducts()){
-      renderProducts();
-      message.textContent =
-        "Product added. It is saved only in this browser, not on a shared website database.";
-
-      ["pname","pprice","pdesc","pimage"].forEach(function(id){
-        document.getElementById(id).value = "";
-      });
-    }else{
-      products = products.filter(function(p){ return p.id !== newProduct.id; });
-    }
-  }
-
-  if(file){
-    if(!file.type.startsWith("image/")){
-      message.textContent = "Please select a valid image.";
+    if(!name || !Number.isFinite(price) || price <= 0){
+      status.textContent =
+        "Enter a product name and a valid price.";
       return;
     }
-    if(file.size > 500 * 1024){
-      message.textContent = "This photo is larger than 500 KB. Compress it and try again.";
+
+    function addProduct(image){
+      const product = {
+        id:"mimas-" + Date.now() + "-" +
+          Math.random().toString(16).slice(2,7),
+        name:name,
+        category:category,
+        price:price,
+        description:description ||
+          "Contact Mimas for product details.",
+        badge:"THE MIMAS EDIT",
+        image:image ||
+          "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=85"
+      };
+
+      products.unshift(product);
+
+      if(persistProducts()){
+        renderProducts();
+        renderAdminProducts();
+
+        document.getElementById("productForm").reset();
+
+        status.textContent =
+          "Product added in this browser. It is not yet shared with other devices.";
+      }else{
+        products = products.filter(function(item){
+          return item.id !== product.id;
+        });
+      }
+    }
+
+    if(!file){
+      addProduct("");
+      return;
+    }
+
+    if(!file.type.startsWith("image/")){
+      status.textContent = "Please choose a valid image.";
+      return;
+    }
+
+    if(file.size > 350 * 1024){
+      status.textContent =
+        "The image is over 350 KB. Compress it before uploading.";
       return;
     }
 
     const reader = new FileReader();
+
     reader.onload = function(){
       addProduct(reader.result);
     };
+
     reader.onerror = function(){
-      message.textContent = "Could not read the selected photo.";
+      status.textContent = "Could not read the selected image.";
     };
+
     reader.readAsDataURL(file);
-  }else{
-    addProduct("");
-  }
-});
-
-document.getElementById("clearForm").addEventListener("click", function(){
-  ["pname","pprice","pdesc","pimage"].forEach(function(id){
-    document.getElementById(id).value = "";
   });
-  document.getElementById("adminMessage").textContent = "Form cleared.";
-});
 
-document.getElementById("search").addEventListener("input", renderProducts);
-document.getElementById("category").addEventListener("change", renderProducts);
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("logout")
+  .addEventListener("click", function(){
+    document.getElementById("dashboard")
+      .classList.add("hidden");
+
+    document.getElementById("loginPanel")
+      .classList.remove("hidden");
+
+    document.getElementById("ownerPassword").value = "";
+
+    document.getElementById("loginMessage").textContent =
+      "You have signed out.";
+  });
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
 renderProducts();
 </script>
+
 </body>
 </html>
