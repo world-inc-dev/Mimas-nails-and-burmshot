@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<meta name="description" content="Shop stylish bails, bumshorts, clothing and accessories at Mimas Bails & Bumshorts. Nails that slay, shorts that fit.">
+<title>Mimas Bails & Bumshorts | Official Store</title>
+
+<style>
+:root{
+  --bg:#101010;
+  --card:#1b1b1b;
+  --accent:#e8ff57;
+  --text:#ffffff;
+  --muted:#b7b7b7;
+  --border:#333333;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.topbar{
+  padding:12px;
+  background:var(--accent);
+  color:#111;
+  text-align:center;
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+.container{width:min(1150px,92%);margin:auto}
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(16,16,16,.96);
+  border-bottom:1px solid var(--border);
+}
+.nav{
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo{
+  font-weight:900;
+  font-size:20px;
+  letter-spacing:1px;
+}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:20px;flex-wrap:wrap}
+.navlinks a{font-size:13px;color:#ddd}
+.navlinks a:hover{color:var(--accent)}
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:35px;
+  padding:55px 0;
+}
+.eyebrow{
+  color:var(--accent);
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+.hero h1{
+  font-size:clamp(40px,6vw,70px);
+  line-height:1.02;
+  margin:15px 0;
+}
+.hero h1 span{color:var(--accent)}
+.hero p{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:15px;
+  max-width:500px;
+}
+.hero img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:20px;
+  border:1px solid var(--border);
+}
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#111;
+  border:0;
+  padding:14px 18px;
+  border-radius:9px;
+  font-weight:bold;
+  font-size:12px;
+  text-align:center;
+}
+.btn:hover{opacity:.86}
+.btn-dark{
+  background:#292929;
+  color:white;
+  border:1px solid #444;
+}
+.section{padding:35px 0}
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:15px;
+  margin-bottom:22px;
+}
+.section-title h2{
+  font-size:30px;
+  margin:0 0 8px;
+}
+.muted{color:var(--muted);font-size:13px;line-height:1.6}
+.toolbar{
+  display:flex;
+  gap:10px;
+  margin-bottom:22px;
+  flex-wrap:wrap;
+}
+.field{
+  background:#202020;
+  border:1px solid #3b3b3b;
+  color:white;
+  padding:13px;
+  border-radius:9px;
+  width:100%;
+  min-width:0;
+}
+.toolbar input{flex:1;min-width:180px}
+.toolbar select{width:auto;min-width:160px}
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:17px;
+}
+.product{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:15px;
+  overflow:hidden;
+  transition:transform .2s,border-color .2s;
+}
+.product:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+}
+.product img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  background:#292929;
+}
+.product-info{padding:14px}
+.category-label{
+  color:var(--accent);
+  font-size:10px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+.product h3{font-size:16px;margin:9px 0}
+.product-description{
+  font-size:12px;
+  line-height:1.6;
+  color:var(--muted);
+  min-height:38px;
+}
+.price{
+  font-size:20px;
+  font-weight:900;
+  margin:12px 0;
+}
+.product .btn{width:100%}
+.empty{
+  padding:25px;
+  color:var(--muted);
+  text-align:center;
+}
+.promo{
+  margin:35px 0;
+  padding:30px;
+  border:1px solid #444;
+  border-radius:17px;
+  background:linear-gradient(130deg,#242424,#121212);
+}
+.promo h2{font-size:28px;margin-top:0}
+.promo h2 span{color:var(--accent)}
+.promo p{color:var(--muted);line-height:1.7}
+.notice{
+  padding:15px;
+  background:#25251a;
+  border:1px solid #565638;
+  color:#f0f0c9;
+  border-radius:10px;
+  font-size:12px;
+  line-height:1.7;
+}
+.admin{
+  background:#191919;
+  border:1px solid #383838;
+  border-radius:16px;
+  padding:22px;
+  margin:30px 0 45px;
+}
+.admin h2{margin-top:0}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+.form-group label{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:7px;
+}
+.form-group.full{grid-column:1/-1}
+.form-group textarea{resize:vertical}
+.admin-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:15px;
+}
+.admin-list{
+  display:grid;
+  gap:9px;
+  margin-top:15px;
+}
+.admin-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  background:#242424;
+  border-radius:9px;
+  font-size:13px;
+}
+.delete-btn{
+  background:#632929;
+  color:white;
+  border:0;
+  padding:9px 12px;
+  border-radius:7px;
+}
+footer{
+  padding:30px 0;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.8;
+}
+.footer-brand{color:white;font-weight:bold}
+.whatsapp-float{
+  position:fixed;
+  bottom:18px;
+  right:16px;
+  z-index:50;
+  background:#25D366;
+  color:white;
+  padding:14px 17px;
+  border-radius:50px;
+  font-weight:bold;
+  font-size:13px;
+  box-shadow:0 5px 20px #0008;
+}
+.hidden{display:none!important}
+@media(max-width:850px){
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero{grid-template-columns:1fr;padding:35px 0}
+  .hero img{height:320px}
+  .nav{padding:14px 0;align-items:flex-start;flex-direction:column}
+  .navlinks{gap:14px}
+}
+@media(max-width:480px){
+  .product-grid{gap:10px}
+  .product img{height:155px}
+  .product-info{padding:10px}
+  .product h3{font-size:14px}
+  .product-description{font-size:11px}
+  .price{font-size:17px}
+  .section-title h2{font-size:25px}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:auto}
+  .hero img{height:260px}
+  .promo{padding:20px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  FRESH FASHION • NEW STOCK • NIGERIAN NAIRA • WHATSAPP ORDERS
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">MIMAS <span>BAILS & BUMSHORTS</span></a>
+    <nav class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#stock">Manage Stock</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<section class="hero" id="home">
+  <div>
+    <div class="eyebrow">Style starts here</div>
+    <h1>Nails that slay,<br><span>shorts that fit.</span></h1>
+    <p>
+      Welcome to Mimas Bails & Bumshorts — your fashion destination
+      for stylish bails, bumshorts, clothing and accessories.
+      Find your look, choose your favourites and order directly
+      through WhatsApp.
+    </p>
+    <a href="#shop" class="btn">EXPLORE THE COLLECTION →</a>
+  </div>
+
+  <img
+    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85"
+    alt="Fashion shopping inspiration"
+  >
+</section>
+
+<section id="shop" class="section">
+  <div class="section-title">
+    <div>
+      <div class="eyebrow">The collection</div>
+      <h2>Shop Your Style</h2>
+      <div class="muted">Browse products and order directly on WhatsApp.</div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <input class="field" id="search" type="search" placeholder="Search products...">
+    <select class="field" id="category">
+      <option value="all">All categories</option>
+      <option value="Bails">Bails</option>
+      <option value="Bumshorts">Bumshorts</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Accessories">Accessories</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="products"></div>
+  <div class="empty hidden" id="empty">No products found. Try another search.</div>
+</section>
+
+<section class="promo" id="about">
+  <div class="eyebrow">Your look. Your confidence.</div>
+  <h2>Nails that slay.<br><span>Shorts that fit.</span></h2>
+  <p>
+    We make it easy to discover fashion pieces that match your style.
+    Browse the available collection and contact us to confirm sizes,
+    colours, availability and delivery options.
+  </p>
+  <a class="btn" href="https://wa.me/2347046202466?text=Hello%20Mimas%20Bails%20%26%20Bumshorts%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">
+    CHAT WITH MIMAS
+  </a>
+</section>
+
+<div class="notice">
+  <strong>Price notice:</strong> The initial products and prices shown are
+  examples for the website demonstration, not confirmed store prices.
+  Please replace them with Mimas's actual products, photos and prices
+  before publishing. Prices are displayed in Nigerian naira (₦ NGN).
+</div>
+
+<section class="section" id="stock">
+  <div class="admin">
+    <div class="eyebrow">Store tools</div>
+    <h2>Stock Manager</h2>
+    <p class="muted">
+      Add new products and upload photos from your phone. You can also remove
+      items from this browser's product list. This demonstration does not have
+      an administrator login or shared online database.
+    </p>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="pname">Product name</label>
+        <input class="field" id="pname" placeholder="e.g. Premium Bumshorts">
+      </div>
+
+      <div class="form-group">
+        <label for="pcat">Category</label>
+        <select class="field" id="pcat">
+          <option>Bails</option>
+          <option>Bumshorts</option>
+          <option>Clothing</option>
+          <option>Accessories</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="pprice">Price in Nigerian naira (₦)</label>
+        <input class="field" id="pprice" type="number" min="1" placeholder="e.g. 6000">
+      </div>
+
+      <div class="form-group">
+        <label for="pimage">Upload product photo</label>
+        <input class="field" id="pimage" type="file" accept="image/*">
+      </div>
+
+      <div class="form-group full">
+        <label for="pdesc">Product description</label>
+        <textarea class="field" id="pdesc" rows="3" placeholder="Describe the item, sizes, colours and material..."></textarea>
+      </div>
+    </div>
+
+    <div class="admin-actions">
+      <button class="btn" id="addProduct">ADD PRODUCT</button>
+      <button class="btn btn-dark" id="clearForm">CLEAR FORM</button>
+    </div>
+
+    <p class="muted" id="adminMessage" aria-live="polite"></p>
+
+    <h3>Current Products</h3>
+    <div id="adminList" class="admin-list"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">MIMAS BAILS & BUMSHORTS</div>
+    <strong>Nails that slay, shorts that fit.</strong><br>
+    WhatsApp: +234 704 620 2466<br>
+    Currency: Nigerian naira (₦ NGN)<br>
+    © <span id="year"></span> Mimas Bails & Bumshorts. All rights reserved.
+  </div>
+</footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/2347046202466?text=Hello%20Mimas%20Bails%20%26%20Bumshorts%2C%20I%20am%20interested%20in%20your%20products."
+   target="_blank" rel="noopener">WhatsApp Us</a>
+
+<script>
+"use strict";
+
+/* Mimas's WhatsApp number: +234 704 620 2466 */
+const STORE_WHATSAPP = "2347046202466";
+const STORAGE_KEY = "mimas_bails_bumshorts_products_v1";
+
+const starterProducts = [
+  {
+    id:"sample-bails",
+    name:"Ladies' Bails Bundle",
+    category:"Bails",
+    price:85000,
+    description:"Sample listing. Confirm bundle contents and actual price.",
+    image:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    id:"sample-shorts",
+    name:"Everyday Bumshorts",
+    category:"Bumshorts",
+    price:6000,
+    description:"Sample listing. Ask about available sizes and colours.",
+    image:"https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    id:"sample-outfit",
+    name:"Casual Ladies' Outfit",
+    category:"Clothing",
+    price:10000,
+    description:"Sample listing. Confirm available styles and sizes.",
+    image:"https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    id:"sample-accessories",
+    name:"Fashion Accessories",
+    category:"Accessories",
+    price:5000,
+    description:"Sample listing. Confirm the item and actual price.",
+    image:"https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80"
+  }
+];
+
+function loadProducts(){
+  try{
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : starterProducts.map(p => ({...p}));
+  }catch(error){
+    return starterProducts.map(p => ({...p}));
+  }
+}
+
+let products = loadProducts();
+
+function money(amount){
+  return "₦" + Number(amount).toLocaleString("en-NG");
+}
+
+function escapeHTML(value){
+  return String(value ?? "").replace(/[&<>"']/g, function(character){
+    return {
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#39;"
+    }[character];
+  });
+}
+
+function saveProducts(){
+  try{
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+    return true;
+  }catch(error){
+    document.getElementById("adminMessage").textContent =
+      "Could not save products. Try a smaller photo or remove some products.";
+    return false;
+  }
+}
+
+function renderProducts(){
+  const searchTerm = document.getElementById("search").value.toLowerCase().trim();
+  const category = document.getElementById("category").value;
+
+  const filtered = products.filter(function(product){
+    const matchesCategory = category === "all" || product.category === category;
+    const searchable = (
+      product.name + " " + product.category + " " + product.description
+    ).toLowerCase();
+    return matchesCategory && searchable.includes(searchTerm);
+  });
+
+  document.getElementById("products").innerHTML = filtered.map(function(product){
+    return `
+      <article class="product">
+        <img src="${escapeHTML(product.image)}"
+             alt="${escapeHTML(product.name)}"
+             loading="lazy">
+        <div class="product-info">
+          <div class="category-label">${escapeHTML(product.category)}</div>
+          <h3>${escapeHTML(product.name)}</h3>
+          <div class="product-description">${escapeHTML(product.description)}</div>
+          <div class="price">${money(product.price)}</div>
+          <button class="btn" type="button" data-order="${escapeHTML(product.id)}">
+            ORDER ON WHATSAPP
+          </button>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  document.getElementById("empty").classList.toggle("hidden", filtered.length !== 0);
+
+  document.querySelectorAll("[data-order]").forEach(function(button){
+    button.addEventListener("click", function(){
+      orderProduct(button.dataset.order);
+    });
+  });
+
+  renderAdminList();
+}
+
+function orderProduct(id){
+  const product = products.find(function(item){
+    return item.id === id;
+  });
+  if(!product) return;
+
+  const message =
+    "Hello Mimas Bails & Bumshorts! I would like to order:\n" +
+    "Product: " + product.name + "\n" +
+    "Displayed price: " + money(product.price) + "\n" +
+    "Please confirm availability, sizes, colours and delivery.";
+
+  const url = "https://wa.me/" + STORE_WHATSAPP +
+              "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank", "noopener");
+}
+
+function renderAdminList(){
+  const list = document.getElementById("adminList");
+
+  if(products.length === 0){
+    list.innerHTML = '<p class="muted">No products listed.</p>';
+    return;
+  }
+
+  list.innerHTML = products.map(function(product){
+    return `
+      <div class="admin-row">
+        <div>
+          <strong>${escapeHTML(product.name)}</strong><br>
+          <span class="muted">${escapeHTML(product.category)} · ${money(product.price)}</span>
+        </div>
+        <button class="delete-btn" type="button" data-remove="${escapeHTML(product.id)}">
+          Remove
+        </button>
+      </div>
+    `;
+  }).join("");
+
+  document.querySelectorAll("[data-remove]").forEach(function(button){
+    button.addEventListener("click", function(){
+      removeProduct(button.dataset.remove);
+    });
+  });
+}
+
+function removeProduct(id){
+  if(!confirm("Remove this product from the list saved in this browser?")) return;
+
+  products = products.filter(function(product){
+    return product.id !== id;
+  });
+
+  if(saveProducts()){
+    renderProducts();
+    document.getElementById("adminMessage").textContent =
+      "Product removed from this browser's list.";
+  }
+}
+
+document.getElementById("addProduct").addEventListener("click", function(){
+  const name = document.getElementById("pname").value.trim();
+  const category = document.getElementById("pcat").value;
+  const price = Number(document.getElementById("pprice").value);
+  const description = document.getElementById("pdesc").value.trim();
+  const file = document.getElementById("pimage").files[0];
+  const message = document.getElementById("adminMessage");
+
+  if(!name || !Number.isFinite(price) || price <= 0){
+    message.textContent = "Enter a product name and a price greater than zero.";
+    return;
+  }
+
+  function addProduct(image){
+    const newProduct = {
+      id:"product-" + Date.now() + "-" + Math.random().toString(16).slice(2,7),
+      name:name,
+      category:category,
+      price:price,
+      description:description || "Contact the store for product details.",
+      image:image || "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"
+    };
+
+    products.unshift(newProduct);
+
+    if(saveProducts()){
+      renderProducts();
+      message.textContent =
+        "Product added. It is saved only in this browser, not on a shared website database.";
+
+      ["pname","pprice","pdesc","pimage"].forEach(function(id){
+        document.getElementById(id).value = "";
+      });
+    }else{
+      products = products.filter(function(p){ return p.id !== newProduct.id; });
+    }
+  }
+
+  if(file){
+    if(!file.type.startsWith("image/")){
+      message.textContent = "Please select a valid image.";
+      return;
+    }
+    if(file.size > 500 * 1024){
+      message.textContent = "This photo is larger than 500 KB. Compress it and try again.";
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(){
+      addProduct(reader.result);
+    };
+    reader.onerror = function(){
+      message.textContent = "Could not read the selected photo.";
+    };
+    reader.readAsDataURL(file);
+  }else{
+    addProduct("");
+  }
+});
+
+document.getElementById("clearForm").addEventListener("click", function(){
+  ["pname","pprice","pdesc","pimage"].forEach(function(id){
+    document.getElementById(id).value = "";
+  });
+  document.getElementById("adminMessage").textContent = "Form cleared.";
+});
+
+document.getElementById("search").addEventListener("input", renderProducts);
+document.getElementById("category").addEventListener("change", renderProducts);
+document.getElementById("year").textContent = new Date().getFullYear();
+
+renderProducts();
+</script>
+</body>
+</html>
